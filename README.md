@@ -78,7 +78,7 @@ npm install
 ## Running The Application
 
 ### Running the Python App
-In the Lemonade directory:
+In the project root directory:
 First alter the set_env_vars.sh to use the username and password we set up for our db:
 
 ```
@@ -88,7 +88,11 @@ Then ensure we have activated our virtualenv if we have not already.
 ```
 . ./lemonade_flask/bin/activate
 ```
-Then to run our application:
+Then to run our application, first cd to the lemonade directory:
+```
+cd lemonade
+```
+Then:
 ```
 python lemonade.py
 ```
