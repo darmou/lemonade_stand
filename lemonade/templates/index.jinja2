@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sally's Lemonade Stand Inventory</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    {{ stylesheet_tag('app_css') | safe }}
+</head>
+<body>
+
+<div id="app" />
+
+
+<!-- This script adds the Roboto font to our project. For more detail go to this site:  http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500 -->
+
+<script>
+    var WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+{{ javascript_tag('app_js') | safe }}
+</body>
+</html>

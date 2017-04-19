@@ -1,0 +1,1 @@
+export const myConfig = { host: "http://localhost:5000", apiUrl: "/api/v1.0" };
