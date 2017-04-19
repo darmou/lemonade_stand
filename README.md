@@ -39,10 +39,13 @@ GRANT ALL PRIVILEGES ON DATABASE "lemonade_stand_test" to example;
 We can now run the migration script to set up our db and test db with the items table:
 
 ```
-lemonade_stand_repo/manage.py version_control 'postgresql://example:example_password@localhost/lemonade_stand' lemonade_stand_repo
+python lemonade_stand_repo/manage.py version_control 'postgresql://example:example_password@localhost/lemonade_stand' lemonade_stand_repo
+python lemonade_stand_repo/manage.py upgrade 'postgresql://example:example_password@localhost/lemonade_stand' lemonade_stand_repo
 
 lemonade_stand_repo/manage.py version_control 'postgresql://example:example_password@localhost/lemonade_stand_test' lemonade_stand_repo
 ```
+
+More about flask-Migrate can be found at https://flask-migrate.readthedocs.io/en/latest/
 
 ### Python Dependencies Setup
 
