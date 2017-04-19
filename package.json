@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "bluebird": "^3.5.0",
+    "babel-core": "^6.24.1",
     "selenium-webdriver": "^3.3.0"
   }
 }

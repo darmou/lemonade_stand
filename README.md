@@ -134,11 +134,11 @@ Next install mocha globally:
 ```
 npm install -g mocha
 ```
-Now we can run the web test:
+Now we can run the web test.  From the root dir which holds the test directory run the following command which will run the tests in the test folder:
 ```
-mocha mocha_tests.js
+mocha 
 ```
-In the tests folder of the project root dir.
+In the test folder of the project root dir.
 
 To run the Python unit tests:
 ```
