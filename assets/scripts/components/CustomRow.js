@@ -14,16 +14,10 @@ class CustomRow extends FormUtils {
     constructor(props) {
         super(props);
         this.state = {
-            name: this.props.rowData.name,
-            description: this.props.rowData.description,
-            price: this.props.rowData.price,
-            image: this.props.rowData.image,
             open: false,
             openConfirm: false
         };
     }
-
-
 
     handleChange(name, e) {
         var change = {};
@@ -44,10 +38,10 @@ class CustomRow extends FormUtils {
         if(this.props.rowData.id) {
             const {items} = this.props;
             const item = this.findItem(items);
-            item.attributes.name = this.state.name;
-            item.attributes.description = this.state.description;
-            item.attributes.price = (this.state.price.length > 0) ? parseFloat(this.state.price) : 0.00;
-            item.attributes.image = this.state.image;
+            item.attributes.name = this.props.rowData.name;
+            item.attributes.description = this.props.rowData.description;
+            item.attributes.price = (this.props.rowData.price.length > 0) ? parseFloat(this.props.rowData.price) : 0.00;
+            item.attributes.image = this.props.rowData.image;
             if(item) { this.props.updateItem(item) };
         }
         this.handleClose();
@@ -62,26 +56,8 @@ class CustomRow extends FormUtils {
         this.handleCloseConfirm();
     }
 
-
-    componentWillReceiveProps(nextProps){
-        if (nextProps.rowData.name !== this.props.rowData.name) {
-            this.setState({ name: nextProps.rowData.name })
-        }
-        if (nextProps.rowData.description !== this.props.rowData.description) {
-            this.setState({ description: nextProps.rowData.description })
-        }
-        if (nextProps.rowData.price !== this.props.rowData.price) {
-            this.setState({ price: nextProps.rowData.price })
-        }
-
-         if (nextProps.rowData.image !== this.props.rowData.image) {
-             this.setState({ image: nextProps.rowData.image })
-         }
-
-    }
-
     uploadSuccess(resp) {
-        this.setState({image: resp.path});
+        this.props.rowData.image = resp.path;
     }
 
     render() {
@@ -143,10 +119,10 @@ class CustomRow extends FormUtils {
                 actions={actions}
                 onRequestClose={this.props.handleRequestClose}
             >
-                <Form name={this.state.name}
-                      description={this.state.description}
-                      price={this.state.price}
-                      image={this.state.image}
+                <Form name={this.props.rowData.name}
+                      description={this.props.rowData.description}
+                      price={this.props.rowData.price}
+                      image={this.props.rowData.image}
                       chooseFiles={this.chooseFiles.bind(this)}
                       uploadSuccess={this.uploadSuccess.bind(this)}
                       handleChange={this.handleChange.bind(this)}

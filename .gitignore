@@ -2,5 +2,6 @@ node_modules
 flask
 .idea
 build
+lemonade/uploads/*
 lemonade/__pycache__
 *.pyc
