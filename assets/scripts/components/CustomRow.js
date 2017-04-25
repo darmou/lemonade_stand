@@ -24,7 +24,7 @@ class CustomRow extends FormUtils {
     }
 
     handleChange(name, e) {
-        var change = {};
+        let change = {};
         change[name] = e.target.value;
         this.setState(change);
     }

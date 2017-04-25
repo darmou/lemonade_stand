@@ -5,7 +5,7 @@ import HandleUpdates from "./HandleUpdates";
 class FormUtils extends HandleUpdates {
 
     handleChange(name, e) {
-        var change = {};
+        let change = {};
         change[name] = e.target.value;
         this.setState(change);
     }
