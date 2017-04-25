@@ -30,10 +30,10 @@ class HandleUpdates extends React.Component {
 
     handleClose() {
         //Reset state if we cancel
-        let name = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.name : "";
-        let description = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.description : "";
-        let price = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.price : "";
-        let image = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.image : "";
+        const name = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.name : "";
+        const description = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.description : "";
+        const price = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.price : "";
+        const image = (this.props.hasOwnProperty("rowData")) ? this.props.rowData.image : "";
         this.setState({open: false,
             name: name,
             description: description,
