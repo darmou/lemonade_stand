@@ -125,7 +125,6 @@ def send_docs(path):
 
 @app.route('/docs')
 def send_docs_index():
-    print("Here")
     return send_from_directory('docs', 'index.html')
 
 @app.errorhandler(404)

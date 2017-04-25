@@ -15,7 +15,7 @@ if __name__ == '__main__':
      if(os.environ.get('LEMONADE_DATABASE_USERNAME')
          and os.environ.get('LEMONADE_DATABASE_PASSWORD')
          and os.environ.get('LEMONADE_DATABASE_NAME')):
-         db_name = os.environ.get('LEMONADE_DATABASE_TEST_NAME') if (type == "test") else  os.environ.get('LEMONADE_DATABASE_NAME')
+         db_name = os.environ.get('LEMONADE_DATABASE_TEST_NAME') if (type == "test") else os.environ.get('LEMONADE_DATABASE_NAME')
          db_username = os.environ.get('LEMONADE_DATABASE_USERNAME')
          db_password = os.environ.get('LEMONADE_DATABASE_PASSWORD')
          repo = 'lemonade_stand_repo'
